@@ -20,4 +20,6 @@ cd /home/pi
 
 ## Usage
 ### Update LMS Client
+```
 sudo /etc/init.d/squeezelite update https://sourceforge.net/projects/lmsclients/files/squeezelite/linux/squeezelite-1.9.7.1237-armv6hf.tar.gz
+```
