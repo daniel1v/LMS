@@ -21,9 +21,6 @@
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
 DESC="Squeezebox client"
 NAME=squeezelite-armv6hf
-SL_DOWNLOAD_URL="http://www.gerrelt.nl/RaspberryPi/squeezelite_ralph/squeezelite-armv6hf.tar.gz"
-#SL_DOWNLOAD_URL="http://ralph_irving.users.sourceforge.net/pico/squeezelite-armv6hf-noffmpeg"
-# alternative (older version): http://squeezelite-downloads.googlecode.com/git/squeezelite-armv6hf
 
 LINUX_DISTRO=$(uname -r)
 if [[ $LINUX_DISTRO == *"piCore"* ]]
@@ -288,9 +285,9 @@ do_stop()
 # Function that updates squeezelite
 #
 do_update()
-{
+{   SL_DOWNLOAD_URL=$1
     mkdir -p /tmp/sl_download
-    wget -P /tmp/sl_download ${SL_DOWNLOAD_URL}
+    wget -P /tmp/sl_download 
 	tar -xvzf /tmp/sl_download/squeezelite-armv6hf.tar.gz -C /tmp/sl_download
     mv /tmp/sl_download/squeezelite /tmp/sl_download/${NAME}
     sudo cp $DAEMON /tmp/${NAME}.old
@@ -670,7 +667,7 @@ case "$1" in
   update)
     echo "Update Squeezelite $SL_VERSION to latest version"
     do_stop
-    do_update
+    do_update $2
     do_start
     echo "Squeezelite updated to version: $SL_VERSION"
     ;;

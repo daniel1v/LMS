@@ -3,12 +3,12 @@
 
 # The name for the squeezelite player, do not use spaces (default the hostname
 # will be used):
-SL_NAME="Wohnzimmer"
+# SL_NAME="Framboos"
 #        Note: "Framboos" is Dutch for Raspberry... :-)
 
 # ----- SOUNDCARD -----
 # Set the soundcard
-SL_SOUNDCARD="equal"
+SL_SOUNDCARD="sysdefault:CARD=ALSA"
 #
 # For Logilink USB soundcard UA0053, use:
 #SL_SOUNDCARD=""default:CARD=Set"
