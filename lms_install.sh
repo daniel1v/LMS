@@ -17,6 +17,5 @@ sudo -i
 iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 9000
 iptables -A PREROUTING -t nat -i wlan0 -p tcp --dport 80 -j REDIRECT --to-port 9000
 iptables-save > /etc/iptables.conf
-nano /etc/rc.local
-iptables-restore < /etc/iptables.conf
+sudo sed -i '1 i\iptables-restore < /etc/iptables.conf\n' /etc/rc.local
 sudo ufw allow 9000/tcp
