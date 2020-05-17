@@ -1,4 +1,4 @@
-# SL
+# LMS
 ## Logitech Media Server
 ### Download and Installation
 
@@ -7,7 +7,7 @@
 cd ~
 mkdir lms
 cd lms
-sudo wget -O lms_install.sh https://raw.githubusercontent.com/daniel1v/SL/master/lms_install.sh
+sudo wget -O lms_install.sh https://raw.githubusercontent.com/daniel1v/LMS/master/lms_install.sh
 
 sudo nano lms_install.sh &&
 sudo chmod a+x lms_install.sh &&
@@ -25,11 +25,11 @@ The installation is based on [this](http://www.gerrelt.nl/RaspberryPi/wordpress/
 cd ~
 mkdir squeezelite
 cd squeezelite
-sudo wget -O hifiberry_setup.sh https://raw.githubusercontent.com/daniel1v/SL/master/hifiberry_setup.sh
-sudo wget -O squeezelite_settings.sh https://raw.githubusercontent.com/daniel1v/SL/master/install_lms_client.sh
-sudo wget https://raw.githubusercontent.com/daniel1v/SL/master/squeezelite_settings.sh
-sudo wget -O squeezelitehf.sh https://raw.githubusercontent.com/daniel1v/SL/master/squeezelitehf.sh
-sudo wget -O squeezelite.service https://raw.githubusercontent.com/daniel1v/SL/master/squeezelite.service
+sudo wget -O hifiberry_setup.sh https://raw.githubusercontent.com/daniel1v/LMS/master/hifiberry_setup.sh
+sudo wget -O squeezelite_settings.sh https://raw.githubusercontent.com/daniel1v/LMS/master/install_lms_client.sh
+sudo wget https://raw.githubusercontent.com/daniel1v/LMS/master/squeezelite_settings.sh
+sudo wget -O squeezelitehf.sh https://raw.githubusercontent.com/daniel1v/LMS/master/squeezelitehf.sh
+sudo wget -O squeezelite.service https://raw.githubusercontent.com/daniel1v/LMS/master/squeezelite.service
 
 sudo nano install_lms_client.sh &&
 sudo chmod a+x install_lms_client.sh &&
