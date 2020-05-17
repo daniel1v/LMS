@@ -1,6 +1,7 @@
 # SL
+Modified scripts, based on [this](http://www.gerrelt.nl/RaspberryPi/wordpress/tutorial-installing-squeezelite-player-on-raspbian) tutorial
 
-Download: 
+##Download
 ```
 cd /home/pi/squeezelite
 sudo wget https://raw.githubusercontent.com/daniel1v/SL/master/squeezelite_settings.sh
@@ -16,3 +17,5 @@ sudo mv squeezelite.service /etc/systemd/system
 sudo systemctl enable squeezelite.service 
 cd /home/pi
 ```
+
+##Usage
