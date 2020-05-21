@@ -13,9 +13,10 @@ sudo dpkg -i $lms_deb
 sudo apt-get -f install
 
 # port forwarding (port 80 --> port 9000) for lms web interface
-sudo -i
-iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 9000
-iptables -A PREROUTING -t nat -i wlan0 -p tcp --dport 80 -j REDIRECT --to-port 9000
-iptables-save > /etc/iptables.conf
-sudo sed -i '1 i\iptables-restore < /etc/iptables.conf\n' /etc/rc.local
+sudo apt install iptables-persistent -y &&
+sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 9000 &&
+sudo iptables -A PREROUTING -t nat -i wlan0 -p tcp --dport 80 -j REDIRECT --to-port 9000 &&
+sudo bash -c "iptables-save > /etc/iptables/rules.v4" &&
+sudo bash -c "iptables-save > /etc/iptables/rules.v6" &&
 sudo ufw allow 9000/tcp
+
