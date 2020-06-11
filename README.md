@@ -27,13 +27,13 @@ cd ~
 mkdir squeezelite
 cd squeezelite
 sudo wget -O hifiberry_setup.sh https://raw.githubusercontent.com/daniel1v/LMS/master/hifiberry_setup.sh
-sudo wget -O install_lms_client.sh https://raw.githubusercontent.com/daniel1v/LMS/master/install_lms_client.sh
+sudo wget -O lms_client_install.sh https://raw.githubusercontent.com/daniel1v/LMS/master/lms_client_install.sh
 sudo wget -O squeezelite_settings.sh https://raw.githubusercontent.com/daniel1v/LMS/master/squeezelite_settings.sh
 sudo wget -O squeezelitehf.sh https://raw.githubusercontent.com/daniel1v/LMS/master/squeezelitehf.sh
 sudo wget -O squeezelite.service https://raw.githubusercontent.com/daniel1v/LMS/master/squeezelite.service
 
 sudo nano install_lms_client.sh &&
-sudo chmod a+x install_lms_client.sh &&
+sudo chmod a+x lms_client_install.sh &&
 sudo ./install_lms_client.sh
 ```
 
