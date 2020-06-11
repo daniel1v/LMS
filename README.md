@@ -32,9 +32,9 @@ sudo wget -O squeezelite_settings.sh https://raw.githubusercontent.com/daniel1v/
 sudo wget -O squeezelitehf.sh https://raw.githubusercontent.com/daniel1v/LMS/master/squeezelitehf.sh
 sudo wget -O squeezelite.service https://raw.githubusercontent.com/daniel1v/LMS/master/squeezelite.service
 
-sudo nano install_lms_client.sh &&
+sudo nano lms_client_install.sh &&
 sudo chmod a+x lms_client_install.sh &&
-sudo ./install_lms_client.sh
+sudo ./lms_client_install.sh
 ```
 
 ### Update from given URL
