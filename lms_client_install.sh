@@ -2,7 +2,7 @@
 hostname=wohnzimmer
 ssid="#mywifissid"
 psk="#mywifipassword"
-lmsclientpath="https://sourceforge.net/projects/lmsclients/files/squeezelite/linux/squeezelite-1.9.7.1237-armv6hf.tar.gz"
+lmsclientpath="https://sourceforge.net/projects/lmsclients/files/squeezelite/linux/squeezelite-1.9.7.1257-armv6hf.tar.gz"
 # for newest version see: https://sourceforge.net/projects/lmsclients/files/squeezelite/linux
 cronjob='0 4 * * * sudo /sbin/shutdown -r now'  # nightly reboot a 4am
 
