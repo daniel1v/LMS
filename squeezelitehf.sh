@@ -287,8 +287,8 @@ do_stop()
 do_update()
 {   SL_DOWNLOAD_URL=$1
     mkdir -p /tmp/sl_download
-    wget -P /tmp/sl_download 
-	tar -xvzf /tmp/sl_download/squeezelite-armv6hf.tar.gz -C /tmp/sl_download
+    wget -P /tmp/sl_download ${SL_DOWNLOAD_URL}
+    tar -xvzf /tmp/sl_download/squeezelite-armv6hf.tar.gz -C /tmp/sl_download
     mv /tmp/sl_download/squeezelite /tmp/sl_download/${NAME}
     sudo cp $DAEMON /tmp/${NAME}.old
     #SL_DOWNLOAD_NAME=$(echo ${SL_DOWNLOAD_URL} | rev | cut -d '/' -f1 | rev)
