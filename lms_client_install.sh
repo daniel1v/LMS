@@ -25,6 +25,7 @@ sudo sed -i 's/SL_SOUNDCARD="sysdefault:CARD=ALSA"/SL_SOUNDCARD="equal"/g' squee
 wget -O squeezelite-armv6hf.tar.gz $lmsclientpath
 tar -xvzf squeezelite-armv6hf.tar.gz
 mv squeezelite squeezelite-armv6hf
+sudo chmod a+x /usr/bin/squeezelite-armv6hf
 
 # modify and display squeezelite_settings.sh
 sudo sed -i 's/#SL_NAME="Framboos"/SL_NAME="'$hostname'"/g' squeezelite_settings.sh
