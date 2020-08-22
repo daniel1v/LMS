@@ -39,7 +39,7 @@ sudo ./lms_client_install.sh
 
 ### Update from given URL
 ```
-sudo /etc/init.d/squeezelite update https://sourceforge.net/projects/lmsclients/files/squeezelite/linux/squeezelite-1.9.7.1237-armv6hf.tar.gz
+sudo /etc/init.d/squeezelite update https://sourceforge.net/projects/lmsclients/files/squeezelite/linux/squeezelite-1.9.7.1270-armv6hf.tar.gz
 
 ```
 ### Start Equalizer
