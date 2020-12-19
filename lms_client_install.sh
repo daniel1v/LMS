@@ -30,8 +30,8 @@ mv squeezelite squeezelite-armhf
 sudo sed -i 's/# SL_NAME="Framboos"/SL_NAME="'$hostname'"/g' squeezelite_settings.sh
 sudo nano squeezelite_settings.sh
 
-sudo mv squeezelite-armv6hf /usr/bin
-sudo chmod a+x /usr/bin/squeezelite-armv6hf
+sudo mv squeezelite-armhf /usr/bin
+sudo chmod a+x /usr/bin/squeezelite-armhf
 
 sudo mv squeezelite_settings.sh /usr/local/bin
 sudo chmod a+x /usr/local/bin/squeezelite_settings.sh
