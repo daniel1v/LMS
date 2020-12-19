@@ -1,7 +1,7 @@
 # Config variables
 hostname=wohnzimmer
-ssid="#mywifissid"
-psk="#mywifipassword"
+#ssid="#mywifissid"
+#psk="#mywifipassword"
 lmsclientpath="https://sourceforge.net/projects/lmsclients/files/squeezelite/linux/squeezelite-1.9.8.1294-armhf.tar.gz"
 # for newest version see: https://sourceforge.net/projects/lmsclients/files/squeezelite/linux
 cronjob='0 4 * * * sudo /sbin/shutdown -r now'  # nightly reboot a 4am
@@ -12,9 +12,9 @@ cronjob='0 4 * * * sudo /sbin/shutdown -r now'  # nightly reboot a 4am
 crontab -l | { cat; echo "$cronjob"; } | crontab -
 
 # set hostname and wifi credentials
-sudo sed -i 's/raspberrypi/$hostname/g' /etc/hostname
-sudo sed -i 's/raspberrypi/$hostname/g' /etc/hosts
-sudo sed -i -e '$a network={\n   ssid='$ssid'\n   psk='$psk'\n}' /etc/wpa_supplicant/wpa_supplicant.conf
+#sudo sed -i 's/raspberrypi/$hostname/g' /etc/hostname
+#sudo sed -i 's/raspberrypi/$hostname/g' /etc/hosts
+#sudo sed -i -e '$a network={\n   ssid='$ssid'\n   psk='$psk'\n}' /etc/wpa_supplicant/wpa_supplicant.conf
 
 # install hifiberry amp2 / dac+, uncomment the following lines, if not needed
 sudo chmod a+x hifiberry_setup.sh
@@ -22,9 +22,9 @@ sudo ./hifiberry_setup.sh
 sudo sed -i 's/SL_SOUNDCARD="sysdefault:CARD=ALSA"/SL_SOUNDCARD="equal"/g' squeezelite_settings.sh
 
 # install lms client
-wget -O squeezelite-armv6hf.tar.gz $lmsclientpath
-tar -xvzf squeezelite-armv6hf.tar.gz
-mv squeezelite squeezelite-armv6hf
+wget -O squeezelite-armhf.tar.gz $lmsclientpath
+tar -xvzf squeezelite-armhf.tar.gz
+mv squeezelite squeezelite-armhf
 
 # modify and display squeezelite_settings.sh
 sudo sed -i 's/# SL_NAME="Framboos"/SL_NAME="'$hostname'"/g' squeezelite_settings.sh
