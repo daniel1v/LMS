@@ -20,7 +20,7 @@
 # PATH should only include /usr/* if it runs after the mountnfs.sh script
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
 DESC="Squeezebox client"
-NAME=squeezelite-armv6hf
+NAME=squeezelite-armhf
 
 LINUX_DISTRO=$(uname -r)
 if [[ $LINUX_DISTRO == *"piCore"* ]]
@@ -287,8 +287,8 @@ do_stop()
 do_update()
 {   SL_DOWNLOAD_URL=$1
     mkdir -p /tmp/sl_download
-    wget -O /tmp/sl_download/squeezelite-armv6hf.tar.gz ${SL_DOWNLOAD_URL}
-    tar -xvzf /tmp/sl_download/squeezelite-armv6hf.tar.gz -C /tmp/sl_download
+    wget -O /tmp/sl_download/squeezelite-armhf.tar.gz ${SL_DOWNLOAD_URL}
+    tar -xvzf /tmp/sl_download/squeezelite-armhf.tar.gz -C /tmp/sl_download
     mv /tmp/sl_download/squeezelite /tmp/sl_download/${NAME}
     sudo cp $DAEMON /tmp/${NAME}.old
     #SL_DOWNLOAD_NAME=$(echo ${SL_DOWNLOAD_URL} | rev | cut -d '/' -f1 | rev)
