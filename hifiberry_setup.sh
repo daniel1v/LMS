@@ -5,7 +5,7 @@ sudo apt install -y libasound2-plugin-equal
 
 sudo sed -i 's/dtparam=audio=on/#dtparam=audio=on/g' /boot/config.txt
 sudo sed -i -e '$a dtoverlay=hifiberry-dacplus' /boot/config.txt
-sudo mv /etc/asound_old.conf
+sudo mv /etc/asound.conf /etc/asound_old.conf
 echo 'ctl.equal {
 type equal;
 controls "/home/pi/.alsaequal.bin"
